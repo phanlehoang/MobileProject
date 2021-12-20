@@ -22,8 +22,7 @@ Hướng dẫn sử dụng app
 9. Chọn một vé để xem mã kích hoạt
 10. Có thể xoá vé đã đặt bằng cách nhấn nút trừ
 
-Phân công
-Đào Hữu Đức - 51704032 - Làm server, phần xử lý của app
-Lê Trần Minh Tâm - 51702174 - Làm báo cáo, phần đồ hoạ cua app
+Author
+Phan Lê Hoàng
 
 
