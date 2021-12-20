@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Homepage"
+    >
+
+    <RelativeLayout
+        android:id="@+id/loadingP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:clickable="true"
+        android:elevation="3dp"
+        android:background="#D0D0D0"
+        android:alpha="0.5"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:background="@drawable/loading_panel">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnSearch"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/app_name"
+                android:textSize="32sp"
+                android:fontFamily="@font/cantata_one"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:id="@+id/layoutRap"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/appName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/cantata_one"
+                    android:text="@string/cum_rap"
+                    android:textSize="24sp"></TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rvCumRap"
+                    android:orientation="vertical">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:id="@+id/layoutThoiGian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layoutRap"
+                app:layout_constraintBottom_toTopOf="@id/layoutTheLoai">
+
+                <TextView
+                    android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thoi_gian"
+                    android:fontFamily="@font/cantata_one"
+                    android:textSize="24sp"></TextView>
+
+                <LinearLayout
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:fontFamily="@font/cantata_one"
+                        android:text="@string/bat_dau"
+                        android:textSize="18sp"></TextView>
+
+                    <EditText
+                        android:id="@+id/dateFrom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:fontFamily="@font/cantata_one"
+                        android:minHeight="48dp"
+                        android:textSize="18dp"
+                        tools:ignore="SpeakableTextPresentCheck"></EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <TextView
+                        android:layout_margin="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ket_thuc"
+                        android:fontFamily="@font/cantata_one"
+                        android:textSize="18sp"></TextView>
+
+                    <EditText
+                        android:id="@+id/dateTo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="3"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:fontFamily="@font/cantata_one"
+                        android:minHeight="48dp"
+                        android:textSize="18dp"
+                        tools:ignore="SpeakableTextPresentCheck"></EditText>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                app:layout_constraintTop_toBottomOf="@id/layoutThoiGian"
+                android:orientation="vertical"
+                android:id="@+id/layoutTheLoai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvTheLoai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/cantata_one"
+                    android:text="Chọn thể loại phim yêu thích:"
+                    android:textSize="24sp"
+                    android:layout_margin="8dp"
+                    ></TextView>
+
+                <Spinner
+                    android:id="@+id/listTheLoai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:fontFamily="@font/cantata_one"
+                    android:spinnerMode="dropdown"
+                    tools:ignore="SpeakableTextPresentCheck"></Spinner>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layoutTheLoai"
+                android:fontFamily="@font/cantata_one"
+                android:text="Độ tuổi của bạn là?"
+                android:textSize="24sp"
+                android:layout_margin="8dp"
+                ></TextView>
+
+            <RadioGroup
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/grdAge"
+                app:layout_constraintTop_toBottomOf="@id/tvAge"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/rl13"
+                    android:text="Dưới 13"
+                    android:fontFamily="@font/cantata_one">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/r13"
+                    android:text="Trên 13"
+                    android:fontFamily="@font/cantata_one">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/r16"
+                    android:text="Trên 16"
+                    android:fontFamily="@font/cantata_one">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/r18"
+                    android:text="Trên 18"
+                    android:fontFamily="@font/cantata_one">
+
+                </RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/grdAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv"
+                android:fontFamily="@font/cantata_one"
+                android:text="Các thông tin bạn đã chọn:"
+                android:textSize="24sp"
+                android:layout_margin="8dp"></TextView>
+
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvKetQuaRap"
+                android:fontFamily="@font/cantata_one"
+                android:text=" Rạp: "
+                android:textSize="24sp"
+                android:layout_margin="8dp"></TextView>
+
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKetQuaRap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvKetQuaTuoi"
+                android:fontFamily="@font/cantata_one"
+                android:text=" Tuổi: "
+                android:textSize="24sp"
+                android:layout_margin="8dp"></TextView>
+
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKetQuaTuoi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvKetQuaTheLoai"
+                android:fontFamily="@font/cantata_one"
+                android:text=" Thể loại: Hành động"
+                android:textSize="24sp"
+                android:layout_margin="8dp"></TextView>
+
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKetQuaTheLoai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cantata_one"
+                android:text=" \n"
+                android:textSize="24sp"
+                android:layout_margin="8dp"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_margin="8dp"
+        android:drawableEnd="@android:drawable/ic_menu_search"
+        android:text="@string/tim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/cantata_one"
+        app:layout_constraintEnd_toEndOf="parent"></Button>
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_margin="8dp"
+        android:drawableEnd="@drawable/ic_baseline_autorenew_24"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/cantata_one"
+        app:layout_constraintEnd_toStartOf="@id/btnSearch"></Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

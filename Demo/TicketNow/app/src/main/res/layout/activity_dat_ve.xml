@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatVe">
+
+    <RelativeLayout
+        android:id="@+id/loadingP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:clickable="true"
+        android:elevation="3dp"
+        android:background="#D0D0D0"
+        android:alpha="0.5"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:background="@drawable/loading_panel">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTitleDatVe"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Đặt vé"></TextView>
+    <LinearLayout
+        android:id="@+id/lnPosterAndName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleDatVe"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/dvPoster"
+            android:layout_width="186dp"
+            android:layout_height="186dp"
+            android:src="@drawable/postertiectrangmau"></ImageView>
+
+        <TextView
+            android:id="@+id/tvTenPhimUpper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cantata_one"
+            android:text="Tiệc Trăng Máu"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            ></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnSelect"
+        app:layout_constraintTop_toBottomOf="@id/lnPosterAndName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày chiếu"
+            android:fontFamily="@font/cantata_one"
+            android:textSize="18sp"></TextView>
+        <Spinner
+            android:layout_margin="8dp"
+            android:id="@+id/listNgayChieu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:fontFamily="@font/cantata_one"
+            android:spinnerMode="dropdown"></Spinner>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suất chiếu"
+            android:fontFamily="@font/cantata_one"
+            android:textSize="18sp"></TextView>
+
+        <Spinner
+            android:id="@+id/listSuatChieu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:fontFamily="@font/cantata_one"
+            android:spinnerMode="dropdown"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"></Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số lượng vé:"
+                android:fontFamily="@font/cantata_one"
+                android:textSize="18sp"></TextView>
+            <EditText
+                android:id="@+id/txtSoVe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Số vé bạn đã chọn"
+                android:enabled="false"
+                android:fontFamily="@font/cantata_one"
+                android:textSize="18sp"></EditText>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/lnSelect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnChonCho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn vé"
+            android:fontFamily="@font/cantata_one"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnInfo"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvDatVeCho"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đặt vé cho: "
+                android:textSize="16sp"
+                android:fontFamily="@font/cantata_one"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"></TextView>
+
+            <TextView
+                android:id="@+id/tvPhimDaChon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvDatVeCho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên phim "
+                android:textSize="16sp"
+                android:fontFamily="@font/cantata_one"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"></TextView>
+            <TextView
+                android:id="@+id/tvNgayDatVe"
+                app:layout_constraintTop_toBottomOf="@id/tvDatVeCho"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ngày đặt vé: "
+                android:textSize="16sp"
+                android:fontFamily="@font/cantata_one"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"></TextView>
+
+            <TextView
+                android:id="@+id/tvNgayDaChon"
+                app:layout_constraintTop_toBottomOf="@id/tvPhimDaChon"
+                app:layout_constraintStart_toEndOf="@id/tvNgayDatVe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ngày chọn"
+                android:textSize="16sp"
+                android:fontFamily="@font/cantata_one"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"></TextView>
+            <TextView
+                android:id="@+id/tvSoGhe"
+                app:layout_constraintTop_toBottomOf="@id/tvNgayDatVe"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Các ghế:  "
+                android:textSize="16sp"
+                android:fontFamily="@font/cantata_one"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"></TextView>
+
+            <TextView
+                android:id="@+id/tvGheDaChon"
+                app:layout_constraintTop_toBottomOf="@id/tvNgayDaChon"
+                app:layout_constraintStart_toEndOf="@id/tvSoGhe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A1, B2"
+                android:textSize="16sp"
+                android:fontFamily="@font/cantata_one"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"></TextView>
+
+            <TextView
+                android:id="@+id/tvSuatChieu"
+                app:layout_constraintTop_toBottomOf="@id/tvSoGhe"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suất chiếu: "
+                android:textSize="16sp"
+                android:fontFamily="@font/cantata_one"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"></TextView>
+
+            <TextView
+                android:id="@+id/tvSuatChieuChon"
+                app:layout_constraintTop_toBottomOf="@id/tvGheDaChon"
+                app:layout_constraintStart_toEndOf="@id/tvSuatChieu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9h"
+                android:textSize="16sp"
+                android:fontFamily="@font/cantata_one"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"></TextView>
+            <Button
+                android:id="@+id/btnDatVe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đặt vé"
+                android:drawableEnd="@drawable/ic_baseline_check_box_24"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"></Button>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

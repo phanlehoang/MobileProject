@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/infoTenPhim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Tên Phim"
+        android:textSize="28sp"
+        android:fontFamily="@font/cantata_one"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"></TextView>
+
+    <TextView
+        android:id="@+id/infoTenRap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoTenPhim"
+        android:text="Rạp"
+        android:textSize="20sp"
+        android:fontFamily="@font/cantata_one"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"></TextView>
+
+    <TextView
+        android:id="@+id/infoSuatChieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoTenRap"
+        android:text="Ngày blahblahblah - Suất chiếu: blehblehbleh"
+        android:textSize="20sp"
+        android:fontFamily="@font/cantata_one"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"></TextView>
+
+    <TextView
+        android:id="@+id/infoGheNgoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoSuatChieu"
+        android:text="Số ghế: A1, A2, A3, A4"
+        android:textSize="20sp"
+        android:fontFamily="@font/cantata_one"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"></TextView>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="3dp"
+        android:drawableEnd="@drawable/ic_baseline_remove_24"></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

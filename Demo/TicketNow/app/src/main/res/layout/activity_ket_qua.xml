@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KetQua">
+
+    <TextView
+        android:id="@+id/tvDanhSach"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Danh sách kết quả"></TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDanhSach"
+        app:layout_constraintTop_toBottomOf="@id/tvDanhSach"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tvNull"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:fontFamily="@font/cantata_one"
+        android:layout_margin="12dp"
+        android:textAlignment="center"
+        android:text="Rất tiếc, không có kết quả phù hợp với lựa chọn của bạn!"
+        android:drawableBottom="@drawable/ic_baseline_mood_bad_24"
+        android:visibility="gone"></TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/posterAndInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/ivPoster"
+            android:layout_width="126dp"
+            android:layout_height="166dp"
+            android:src="@drawable/postertiectrangmau"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"></ImageView>
+
+        <LinearLayout
+            app:layout_constraintStart_toEndOf="@id/ivPoster"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTenPhim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tiệc trăng máu"
+                android:textSize="28sp"
+                android:fontFamily="@font/cantata_one"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thể loại: "
+                    android:textSize="14sp"
+                    android:fontFamily="@font/cantata_one"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"></TextView>
+                <TextView
+                    android:id="@+id/tvTheLoaiPhim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thể loại: hài hước"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/cantata_one"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thời lượng: "
+                    android:textSize="14sp"
+                    android:fontFamily="@font/cantata_one"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"></TextView>
+                <TextView
+                    android:id="@+id/tvThoiLuong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thời lượng: 118p"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/cantata_one"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"></TextView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rated: "
+                    android:textSize="14sp"
+                    android:fontFamily="@font/cantata_one"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"></TextView>
+                <TextView
+                    android:id="@+id/tvRated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rated: 18+"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/cantata_one"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đạo diễn: "
+                    android:textSize="14sp"
+                    android:fontFamily="@font/cantata_one"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"></TextView>
+                <TextView
+                    android:id="@+id/tvDaoDien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rated: 18+"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/cantata_one"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTomTat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/posterAndInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tóm tắt: đây là vài dòng tóm tắt /n Đây là dòng tóm tắt /n Đây là dòng tóm tắt/n Đây là dòng tóm tắt"
+        android:textSize="14sp"
+        android:fontFamily="@font/cantata_one"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"></TextView>
+    <Button
+        android:id="@+id/btnDatVe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTomTat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Đặt vé"
+        android:fontFamily="@font/cantata_one"
+        android:drawableEnd="@drawable/ic_baseline_date_range_24"></Button>
+    <Button
+        android:id="@+id/btnTrailer"
+        app:layout_constraintStart_toEndOf="@id/btnDatVe"
+        app:layout_constraintTop_toBottomOf="@id/tvTomTat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Trailer"
+        android:fontFamily="@font/cantata_one"
+        android:drawableEnd="@drawable/ic_baseline_movie_24"></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
